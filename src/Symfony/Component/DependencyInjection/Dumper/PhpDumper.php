@@ -560,7 +560,7 @@ EOF;
                     if ($this->inlineFactories) {
                         $this->inlinedRequires[$file] = true;
                     }
-                    $code .= sprintf("include_once %s;\n", $file);
+                    $code .= sprintf("include_once (%s);\n", $file);
                 }
 
                 $proxyCode = $code.$proxyCode;
